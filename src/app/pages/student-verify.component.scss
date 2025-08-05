@@ -1,0 +1,27 @@
+.container {
+  max-width: 400px;
+  margin: auto;
+  padding-top: 2rem;
+
+  .full-width {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  .success {
+    color: green;
+    margin-top: 1rem;
+  }
+
+  .error {
+    color: red;
+    margin-top: 1rem;
+  }
+
+  .admin-greeting {
+    margin-bottom: 1rem;
+    font-weight: bold;
+    color: #2e7d32; // dark green
+  }
+
+}

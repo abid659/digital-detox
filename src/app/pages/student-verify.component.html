@@ -1,0 +1,30 @@
+<div class="container">
+  <h2>শ্রেণি ও রোল নম্বর যাচাই</h2>
+
+  <form [formGroup]="verifyForm" (ngSubmit)="verify()">
+    <mat-form-field appearance="fill" class="full-width">
+      <mat-label>শ্রেণি নির্বাচন করুন</mat-label>
+      <mat-select formControlName="class" required>
+        <mat-option [value]="3">৩</mat-option>
+        <mat-option [value]="4">৪</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill" class="full-width">
+      <mat-label>রোল নম্বর</mat-label>
+      <input matInput type="number" formControlName="roll" required />
+    </mat-form-field>
+
+    <button mat-raised-button color="primary" class="full-width" type="submit">
+      যাচাই করুন
+    </button>
+  </form>
+
+  <div *ngIf="verifiedStudent" class="success">
+    ✅ {{ verifiedStudent.name }} সঠিকভাবে শনাক্ত হয়েছেন!
+  </div>
+
+  <div *ngIf="errorMessage" class="error">
+    ❌ {{ errorMessage }}
+  </div>
+</div>

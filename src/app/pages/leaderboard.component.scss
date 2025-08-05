@@ -1,0 +1,21 @@
+.container {
+  max-width: 900px;
+  margin: auto;
+  padding-top: 2rem;
+
+  .filter-form {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+
+    mat-form-field {
+      width: 200px;
+    }
+  }
+
+  .error {
+    color: red;
+    margin-top: 1rem;
+  }
+}

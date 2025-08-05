@@ -1,0 +1,19 @@
+<div class="container" *ngIf="student">
+  <h2>স্বাগতম, {{ student.name }}</h2>
+  <p>সপ্তাহের জন্য নিচের প্রশ্নগুলোর উত্তর দিন:</p>
+
+  <form (ngSubmit)="submit()">
+    <div *ngFor="let q of questions" class="question-block">
+      <p><strong>{{ q.questionText }}</strong></p>
+      <mat-radio-group [(ngModel)]="answers[q.questionId]" name="q{{ q.questionId }}" required>
+        <mat-radio-button [value]="true">হ্যাঁ</mat-radio-button>
+        <mat-radio-button [value]="false">না</mat-radio-button>
+      </mat-radio-group>
+    </div>
+
+    <button mat-raised-button color="primary" type="submit" class="full-width">জমা দিন</button>
+  </form>
+
+  <div *ngIf="success" class="success">{{ success }}</div>
+  <div *ngIf="error" class="error">{{ error }}</div>
+</div>
