@@ -28,7 +28,8 @@ export interface SubmitAnswersDto {
   providedIn: 'root'
 })
 export class ApiService {
-  private readonly baseUrl = 'https://localhost:7107/api';
+  private readonly baseUrl = 'https://digitaldetoxapi.onrender.com/api';
+
 
   constructor(private http: HttpClient) {}
 
